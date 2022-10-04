@@ -42,7 +42,7 @@ export default function Home({ latestComics }) {
   );
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const files = await fs.readdir("./data/comics");
   const lastestComicsFiles = files.slice(-8, files.length);
 
